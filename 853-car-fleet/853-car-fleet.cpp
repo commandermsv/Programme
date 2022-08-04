@@ -13,10 +13,10 @@ public:
         
         for(int i=speed.size()-1;i>=0;i--){
             t=(target-final[i].first)/float(final[i].second);
-            cout<<t<<endl;
+            // cout<<t<<endl;
             if(s.empty() || s.top()<t){
                 s.push(t);
-                 cout<<"for push: "<<t<<endl;
+                 // cout<<"for push: "<<t<<endl;
                 count++;
             }
         }
