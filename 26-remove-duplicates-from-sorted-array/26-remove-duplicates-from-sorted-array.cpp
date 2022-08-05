@@ -13,7 +13,7 @@ public:
            // nums.clear();
          for(auto& i:s){
                 nums[j]=i;
-             cout<<"value of i"<<i<<endl;
+             // cout<<"value of i"<<i<<endl;
                 j++;
             }
         return count;
