@@ -4,12 +4,12 @@ public:
         int start=0,end=nums.size()-1,mid;
         int k=end;
         vector<int> result(2,0);
+                result[0]=-1;
+                result[1]=-1;
         mid=start+(end-start)/2;
         if(nums.size()==1){
             if(target!=nums[0])
             {
-                result[0]=-1;
-                result[1]=-1;
                 return result;
             }
             else{
@@ -40,21 +40,15 @@ public:
                 start=mid+1;
             }
             else {
-                result[0]=-1;
-                result[1]=-1;
                 return result;
                 
             }
             if(end>k || start<0){
-                result[0]=-1;
-                result[1]=-1;
-                return result;
+                    return result;
             }
               mid=start+(end-start)/2;
 
         }
-                result[0]=-1;
-                result[1]=-1;
                 return result;
         
     }
