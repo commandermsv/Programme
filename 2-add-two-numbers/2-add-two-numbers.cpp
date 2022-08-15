@@ -38,30 +38,19 @@ public:
         
         while(head!=NULL){
             if(z==NULL){
-                // cout<<"entry temp: "<<temp<<endl;
+               
             int tv=(head->val+temp)%10;
             temp=(head->val+temp)/10;
-            // cout<<"l1: "<<l1->val<<endl;
-            // cout<<"l2: "<<l2->val<<endl;
-            // cout<<"temp: "<<temp<<endl;
+          
             tail=head;
-            // cout<<"head value: "<<head->val<<endl;
             head->val=tv;
-            head=head->next;
-            // l1=l1->next;
-            // l2=l2->next;
-                
+            head=head->next;  
             }
             else{
-            // head->val=head->val;
-            cout<<"entry temp: "<<temp<<endl;
+       
             int tv=(l1->val+l2->val+temp)%10;
             temp=(l1->val+l2->val+temp)/10;
-            cout<<"l1: "<<l1->val<<endl;
-            cout<<"l2: "<<l2->val<<endl;
-            cout<<"temp: "<<temp<<endl;
             tail=head;
-            cout<<"head value: "<<head->val<<endl;
             head->val=tv;
             head=head->next;
             l1=l1->next;
