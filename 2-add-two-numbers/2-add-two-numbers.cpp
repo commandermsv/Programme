@@ -14,7 +14,6 @@ public:
         int temp=0;
         if(l1==NULL) return l2;
         else if(l2==NULL) return l1;
-        
             ListNode* l11=l1;
             ListNode* l22=l2;
             ListNode* tail;
@@ -63,14 +62,6 @@ public:
             tail->next=s;
             s->val=temp;
         }
-        // head=hf;
-        // int k=0;
-        // while(k==0 && hf->next!=NULL){
-        //  if(hf->val==0){
-        //      hf=hf->next;
-        //  }
-        //     else k=1;
-        // }
         return hf;
     }
 };
