@@ -17,7 +17,6 @@ public:
         queue<TreeNode*> q;
         q.push(root);        
         while(!q.empty()){
-            // vector<int> curr;
             int count=q.size();
             for(int i=0;i<count;i++){
                 TreeNode* node = q.front();
