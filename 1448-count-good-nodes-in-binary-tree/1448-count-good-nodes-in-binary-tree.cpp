@@ -11,15 +11,28 @@
  */
 class Solution {
 public:
-     int result(TreeNode* root, int m){
-         if(root==NULL) return 0;
-         int res=root->val<m? 0:1;
-         m=max(m,root->val);
-         return res+result(root->left,m)+result(root->right,m);
-     }
+    int m=0,r=0;
+    int count(TreeNode* root){
+        if(root==NULL) return NULL;
+        return 1+count(root->left)+count(root->right);
+    }
+    
+    int check(TreeNode* root, int m){
+        if(root==NULL) return 0;
+        m=max(m,root->val);
+        if(root->val<m){
+            r++;
+            
+        }
+        check(root->left,m);
+        check(root->right,m);
+        return r;
+    }
     
     int goodNodes(TreeNode* root) {
-        return result(root,INT_MIN);
+        int c=count(root);
+        r=check(root,INT_MIN);
+        return c-r;
         
     }
 };
