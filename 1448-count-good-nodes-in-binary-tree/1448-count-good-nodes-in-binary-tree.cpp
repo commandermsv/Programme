@@ -11,7 +11,7 @@
  */
 class Solution {
 public:
-    int m=0,r=0;
+   int r=0;
     int count(TreeNode* root){
         if(root==NULL) return NULL;
         return 1+count(root->left)+count(root->right);
